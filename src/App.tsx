@@ -4,6 +4,7 @@ import {Counter} from './components/counter/Counter';
 import ListOfChannels from './components/listOfChannel/ListOfChannels';
 import UserForm from './components/userForm/UserForm';
 import {UserCard} from './components/userCard/UserCard';
+import HomePage from './pages/homePage/HomePage';
 const App: React.FC = () => {
  
 const user = {
@@ -15,10 +16,11 @@ const user = {
   
   return (
     <div>
-      <UserCard userData = {user}/>
+      {/* <UserCard userData = {user}/>
       <UserForm/>    
       <Counter/>      
-      <ListOfChannels/>
+      <ListOfChannels/> */}
+      <HomePage/>
     
   </div> 
   );

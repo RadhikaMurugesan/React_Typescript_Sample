@@ -8,4 +8,10 @@
 
 ##components/listOfChannel - It describes the react hooks useEffect.
 
+# ReactJs - LifecycleMethods
+
+##components/componentDidMount - It describes the componentDidMount method.
+
+##components/getDerivedStatesFromProps - It describes the getDerivedStatesFromProps method.
+
 
