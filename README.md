@@ -14,4 +14,8 @@
 
 ##components/getDerivedStatesFromProps - It describes the getDerivedStatesFromProps method.
 
+# Program without Lifecycle Hooks
+
+##components/withoutLifecycleHooks - Program without lifecycle methods and hooks.
+
 

@@ -1,2 +1,2 @@
-import GetDerivedStatesFromProps from './GetDerivedStatesProps';
+import GetDerivedStatesFromProps from './GetDerivedStatesFromProps';
 export default GetDerivedStatesFromProps;
