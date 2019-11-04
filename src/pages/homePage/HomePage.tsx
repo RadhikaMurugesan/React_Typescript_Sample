@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ComponentDidMount from '../../components/componentDidMount/ComponentDidMount';
-import GetDerivedStatesFromProps from '../../components/getDerivedStatesFromProps/GetDerivedStatesFromProps';
+//import GetDerivedStatesFromProps from '../../components/getDerivedStatesFromProps/GetDerivedStatesFromProps';
 import StateAndProps from '../../components/withoutLifecycleHooks/State&Props';
 import './styles.css';
-
+import Test from '../lifecyclePage/Lifecycle';
 
 export default class HomePage extends Component {
 
@@ -17,6 +17,8 @@ export default class HomePage extends Component {
                 {/* <GetDerivedStatesFromProps ColorName={color} /> */}
                 <h2>Program without lifecycle hooks</h2>
                 <StateAndProps name="Aaradhana" enthusiasmLevel={10}/>
+                <Test/>
+                
             </div>
 
         );

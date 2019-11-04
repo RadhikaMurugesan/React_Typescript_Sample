@@ -5,6 +5,7 @@ import ListOfChannels from './components/listOfChannel/ListOfChannels';
 import UserForm from './components/userForm/UserForm';
 import {UserCard} from './components/userCard/UserCard';
 import HomePage from './pages/homePage/HomePage';
+import ConditionalRenderingPage from './pages/conditionalRendering/ConditionalRenderingPage';
 const App: React.FC = () => {
  
 const user = {
@@ -21,6 +22,7 @@ const user = {
       <Counter/>      
       <ListOfChannels/> */}
       <HomePage/>
+      <ConditionalRenderingPage/>
     
   </div> 
   );
