@@ -22,4 +22,8 @@
 
 ##pages/conditionalRenderingPage - It describes about react conditional statements.
 
+# List and Array
+
+##pages/listAndArray - It describes listing the items into the table from the array.
+
 
