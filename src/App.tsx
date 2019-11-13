@@ -7,8 +7,7 @@ import {UserCard} from './components/userCard/UserCard';
 import HomePage from './pages/homePage/HomePage';
 import ConditionalRenderingPage from './pages/conditionalRendering/ConditionalRenderingPage';
 import {ListAndArray} from './pages/listAndArrayPage/ListAndArray';
-import ReactForm from './components/reactForm/ReactForm';
-
+import Routing from '../src/config/RouteNav';
 const App: React.FC = () => {
  
 const user = {
@@ -26,15 +25,15 @@ const data = [
   
   return (
     <div>
-      {/* <UserCard userData = {user}/> */}
-      {/* <UserForm/>     */}
-      {/* <Counter/>      
-      <ListOfChannels/> */}
-      {/* <HomePage/> */}
-      {/* <ConditionalRenderingPage/> */}
-      {/* <ListAndArray data={data} /> */}
-      <ReactForm/>
-     
+      {/* <UserCard userData = {user}/>
+      <UserForm/>    
+      <Counter/>      
+      <ListOfChannels/>
+      <HomePage/>
+      <ConditionalRenderingPage/>
+      <ListAndArray data={data} />
+      <ReactForm/> */}
+     <Routing/>
   </div> 
   );
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { any } from 'prop-types';
 
 interface FormState {
-    name: string,
+    userName: string,
     gender: string,
     language: string,
     domain: string,
@@ -12,7 +13,7 @@ interface FormState {
 export default class ReactForm extends Component<{}, FormState> {
     
         state: FormState ={
-            name:'',
+            userName:'',
             gender: '',
             language:'',
             domain:'',
@@ -22,13 +23,14 @@ export default class ReactForm extends Component<{}, FormState> {
   
        
 
-        handleChange = (e:any) => {
-            console.log("event", e.target.value);
-            this.setState({
-              name:e.target.value.name,
-              gender: e.target.value.gender     
-            }
-            )
+        handleChange = (event:React.FormEvent<HTMLInputElement>) => {
+            console.log('event',event.currentTarget.value);
+            
+            const name = event.currentTarget.name;
+            const value = event.currentTarget.value;
+            this.setState({[name]: value}as Pick<FormState, keyof FormState>);
+            console.log('name', this.state.userName);
+            
            }
 
         //    handleSubmit= (t:any)=>{
@@ -49,7 +51,7 @@ export default class ReactForm extends Component<{}, FormState> {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
-                    <input type="text" value={this.state.name} name="name" onChange={this.handleChange} />
+                    <input type="text" value={this.state.userName} name="userName" onChange={this.handleChange} />
                     </label>
                     <br /><br />
                     <p>Gender:</p>
@@ -60,6 +62,7 @@ export default class ReactForm extends Component<{}, FormState> {
                         <input 
                         type="radio" 
                         value="male" 
+                        name={this.state.gender}
                         checked={this.state.gender === "male"}
                         onChange={this.handleChange} />
                             </label>
@@ -71,13 +74,14 @@ export default class ReactForm extends Component<{}, FormState> {
                                 <input 
                         type="radio" 
                         value="male" 
+                        name={this.state.gender}
                         checked={this.state.gender === "female"}
                         onChange={this.handleChange} />
                             </label>
                         </li>
                     </ul>
                     <br /><br />
-                    <p> Language Known:</p>
+                    {/* <p> Language Known:</p>
                     <label>
                      Tamil  
                     <input type="checkbox" value="" name="name" onChange={() => { }} />
@@ -109,7 +113,7 @@ export default class ReactForm extends Component<{}, FormState> {
                         Comments:
                     <textarea  value="" name="name" onChange={() => { }} />
                     </label>
-                    <br/><br/>
+                    <br/><br/> */}
                     <button type="submit">Submit</button>
 
                 </form>

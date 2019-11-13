@@ -30,4 +30,8 @@
 
 ##components/reactForm - It describes all the form elements and handling form submit.
 
+# React Router
+
+##config/RouteNav - It describes the react router with navlink, switch and exact path. 
+
 
