@@ -34,4 +34,6 @@
 
 ##config/RouteNav - It describes the react router with navlink, switch and exact path. 
 
+## React Router - URL Parameters.
+
 
