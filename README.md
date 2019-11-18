@@ -36,4 +36,13 @@
 
 ## React Router - URL Parameters.
 
+# React Higher Order Components
+
+##components/hoc - It describes HOC and its functionality.
+
+##components/stockNameList & components/userNameList - Both describes the name list as table.
+
+##components/tableRow - It describes the table row for nameList component.
+
+##models/NameListInterface - It has interface for stockNameList and userNameList component respectively.
 
