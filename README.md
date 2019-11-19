@@ -46,3 +46,19 @@
 
 ##models/NameListInterface - It has interface for stockNameList and userNameList component respectively.
 
+# Using Axios with React
+
+##components/axiosGet - It describes axios get method to list the usernames.
+
+##components/axiosPost - It describes axios post method used in form submition.
+
+##components/axiosDelete - It describes axios delete method to delete the values.
+
+##components/axiosAll - It describes axios all method used for making simultaneous request.
+
+##pages/axiosSamplePage - It is wrapper page for all the axios method.
+
+##config/AxiosBase - It describes the axios base instance.
+
+
+
