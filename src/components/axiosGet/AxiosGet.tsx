@@ -18,6 +18,8 @@ export default class AxiosGet extends Component<{}, State>{
   componentDidMount() {
     API.get(`users`)
       .then(res => {
+        console.log('get res', res);
+        
         const persons = res.data;
         this.setState({ persons });
       })

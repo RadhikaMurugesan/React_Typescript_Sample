@@ -28,6 +28,7 @@ const data = [
   {id: 3, title: 'Third', content: 'Here, you can learn all the ReactJS topics!!'}  
 ];  
 
+// for implementing hoc in future
 // const StocksData = [
 //   {
 //       id: 1,
@@ -71,15 +72,14 @@ const data = [
   
   return (
     <div>
-      {/* <UserCard userData = {user}/>
+      <UserCard userData = {user}/>
       <UserForm/>    
       <Counter/>      
       <ListOfChannels/>
       <HomePage/>
       <ConditionalRenderingPage/>
-      <ListAndArray data={data} />
-      <ReactForm/> */      
-     /* <Routing/> */}
+      <ListAndArray data={data} />      
+     <Routing/>
   <AxiosSample/>
       
 </div> 

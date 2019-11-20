@@ -60,5 +60,13 @@
 
 ##config/AxiosBase - It describes the axios base instance.
 
+##components/axiosPut - It describes the axios put method for update.
+
+##components/axiosPatch - It describes the axios patch method used for partial updation.
+
+##components/axiosErrorHandling - It describes about try catch for handling errors.
+
+##components/axiosHead - It describes about axios Head method used for getting header information.
+
 
 

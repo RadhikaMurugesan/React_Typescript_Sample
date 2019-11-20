@@ -17,11 +17,7 @@ export default class AxiosDelete extends Component<{}, State>{
   handleSubmit = async (event:any) => {
     event.preventDefault();
 
-    const response = await API.delete(`users/${this.state.id}`);
-    //   .then(res => {
-    //     console.log(res);
-    //     console.log(res.data);
-    //   })
+    const response = await API.delete(`users/${this.state.id}`);    
       console.log('response', response);
       
   }

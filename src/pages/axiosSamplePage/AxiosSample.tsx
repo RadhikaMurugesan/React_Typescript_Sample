@@ -3,6 +3,10 @@ import AxiosGet from '../../components/axiosGet';
 import AxiosPost from '../../components/axiosPost';
 import AxiosDelete from '../../components/axiosDelete';
 import AxiosAll from '../../components/axiosAll';
+import AxiosPut from '../../components/axiosPut';
+import AxiosHead from '../../components/axiosHead';
+import AxiosErrorHandling from '../../components/axiosErrorHandling';
+import AxiosPatch from '../../components/axiosPatch';
 
 export default function AxiosSample() {
 
@@ -14,7 +18,11 @@ export default function AxiosSample() {
             <br/>
             <AxiosDelete />
             <br/>
-            <AxiosAll/>
+            <AxiosAll/>            
+            <AxiosPut/>           
+            <AxiosHead/>            
+            <AxiosErrorHandling/>
+            <AxiosPatch/>
         </div>
         
     );

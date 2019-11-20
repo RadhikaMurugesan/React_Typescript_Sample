@@ -39,8 +39,9 @@ export default class ReactForm extends Component<{}, FormState> {
         //    } 
         handleSubmit = (e:any) => {
             e.preventDefault();
-            console.log("submit",this)
-            // alert(`You have successfully submitted${this.state.name}`);
+           
+           console.log('name', this.state.userName);
+           
           }
     
     
