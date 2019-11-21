@@ -4,47 +4,34 @@ import { any } from 'prop-types';
 interface FormState {
     userName: string,
     gender: string,
-    language: string,
+    hindi: boolean,
+    english: boolean,
+    tamil: boolean,
     domain: string,
     comments: string
 }
 
 
 export default class ReactForm extends Component<{}, FormState> {
-    
-        state: FormState ={
-            userName:'',
-            gender: '',
-            language:'',
-            domain:'',
-            comments:''
-            
-        };
-  
-       
 
-        handleChange = (event:React.FormEvent<HTMLInputElement>) => {
-            console.log('event',event.currentTarget.value);
-            
-            const name = event.currentTarget.name;
-            const value = event.currentTarget.value;
-            this.setState({[name]: value}as Pick<FormState, keyof FormState>);
-            console.log('name', this.state.userName);
-            
-           }
+    state: FormState = {
+        userName: '',
+        gender: '',
+        hindi: false,
+        english: false,
+        tamil: false,
+        domain: '',
+        comments: ''
 
-        //    handleSubmit= (t:any)=>{
-        //     console.log("submit",this.state)
+    };
 
-        //    } 
-        handleSubmit = (e:any) => {
-            e.preventDefault();
-           
-           console.log('name', this.state.userName);
-           
-          }
-    
-    
+
+    handleSubmit = (event: any) => {
+        event.preventDefault();
+        alert(`Thanks for submitting...!${this.state.userName}`);
+       }
+
+
     render() {
         return (
             <div>
@@ -52,7 +39,20 @@ export default class ReactForm extends Component<{}, FormState> {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
-                    <input type="text" value={this.state.userName} name="userName" onChange={this.handleChange} />
+                    <input type="text" value={this.state.userName} name="userName"
+                            onChange={(
+                                ev: React.ChangeEvent<HTMLInputElement>,
+                            ): void => this.setState({ userName: ev.target.value })} />
+                    </label>
+                    <br /><br />
+
+                    <label>
+                        Comments:
+                    <textarea value={this.state.comments} name="comments"
+                            onChange={(
+                                ev: React.ChangeEvent<HTMLTextAreaElement>,
+                            ): void => this.setState({ comments: ev.target.value })}
+                        />
                     </label>
                     <br /><br />
                     <p>Gender:</p>
@@ -60,48 +60,38 @@ export default class ReactForm extends Component<{}, FormState> {
                         <li>
                             <label>
                                 Male:
-                        <input 
-                        type="radio" 
-                        value="male" 
-                        name={this.state.gender}
-                        checked={this.state.gender === "male"}
-                        onChange={this.handleChange} />
+                        <input
+                                    type="radio"
+                                    value="male"
+                                    checked={this.state.gender === "male"}
+                                    onChange={(
+                                        ev: React.ChangeEvent<HTMLInputElement>,
+                                    ): void => this.setState({ gender: ev.target.value })} />
                             </label>
                         </li>
 
                         <li>
                             <label>
                                 Female:
-                                <input 
-                        type="radio" 
-                        value="male" 
-                        name={this.state.gender}
-                        checked={this.state.gender === "female"}
-                        onChange={this.handleChange} />
+                                <input
+                                    type="radio"
+                                    value="female"
+                                    checked={this.state.gender === "female"}
+                                    onChange={(
+                                        ev: React.ChangeEvent<HTMLInputElement>,
+                                    ): void => this.setState({ gender: ev.target.value })} />
                             </label>
                         </li>
                     </ul>
                     <br /><br />
-                    {/* <p> Language Known:</p>
-                    <label>
-                     Tamil  
-                    <input type="checkbox" value="" name="name" onChange={() => { }} />
-                    </label>
-                    <br /><br />
-                    <label>
-                     English  
-                    <input type="checkbox" value="" name="name" onChange={() => { }} />
-                    </label>
-                    <br /><br />
-                    <label>
-                     Hindi  
-                    <input type="checkbox" value="" name="name" onChange={() => { }} />
-                    </label>
-                    <br /><br />
-
                     <label>
                         Domain:
-                        <select value="">
+                        <select
+                            value={this.state.domain}
+                            onChange={(
+                                ev: React.ChangeEvent<HTMLSelectElement>,
+                            ): void => this.setState({ domain: ev.target.value })}
+                        >
                             <option value="ReactJs">ReactJs</option>
                             <option value="ReactNative">ReactNative</option>
                             <option value="Java">Java</option>
@@ -109,12 +99,32 @@ export default class ReactForm extends Component<{}, FormState> {
                         </select>
                     </label>
                     <br /><br />
-
+                    <p> Language Known:</p>
                     <label>
-                        Comments:
-                    <textarea  value="" name="name" onChange={() => { }} />
+                        Tamil
+                    <input type="checkbox" checked={this.state.tamil}
+                            onChange={(
+                                ev: React.ChangeEvent<HTMLInputElement>,
+                            ): void => this.setState({ tamil: ev.target.checked })}
+                        />
                     </label>
-                    <br/><br/> */}
+                    <br /><br />
+                    <label>
+                        English
+                    <input type="checkbox" checked={this.state.english}
+                            onChange={(
+                                ev: React.ChangeEvent<HTMLInputElement>,
+                            ): void => this.setState({ english: ev.target.checked })}
+                        />
+                    </label>
+                    <br /><br />
+                    <label>
+                        Hindi
+                    <input type="checkbox" checked={this.state.hindi} onChange={(
+                            ev: React.ChangeEvent<HTMLInputElement>,
+                        ): void => this.setState({ hindi: ev.target.checked })} />
+                    </label>
+                    <br /><br />
                     <button type="submit">Submit</button>
 
                 </form>

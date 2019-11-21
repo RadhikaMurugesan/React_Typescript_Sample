@@ -12,6 +12,8 @@ import StockList from './components/stockNameList';
 import UserList from './components/userNameList';
 // import Hoc from '../src/components/hoc/HocComp';
 import AxiosSample from '../src/pages/axiosSamplePage/AxiosSample';
+import ReactForm from './components/reactForm';
+import Hoc from './components/hoc';
 
 const App: React.FC = () => {
  
@@ -81,7 +83,7 @@ const data = [
       <ListAndArray data={data} />      
      <Routing/>
   <AxiosSample/>
-      
+  <ReactForm/>
 </div> 
   );
 }

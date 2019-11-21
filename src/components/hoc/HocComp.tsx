@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
 import {NameListInterface} from '../../models/NameListInterface';
 
-interface State {
+interface ListProps {
     data: Array<NameListInterface>
 }
-export default function Hoc(HocComponent:any, data:any){
-    return class extends Component<State>{
+export default function Hoc<T>(Component: React.ComponentType<T>)
+{
+    return (props: T) => (
+        <>
        
-            state:State = {
-                data: data
-            };
+        <div>
+          <Component {...props} />
+        </div>
         
-        
-        render(){
-            return (
-                <HocComponent data={this.state.data} {...this.props} />
-            );
-        }
-    } 
+      </>);
 }
